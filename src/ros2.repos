@@ -1,0 +1,7 @@
+repositories:
+
+# ROS 2 Testing Framework
+  ros2_test_framework:
+    type: git
+    url: git@github.com:Beam-and-Spyrosoft/ros2_test_framework.git
+    version: main

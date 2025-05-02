@@ -1,0 +1,37 @@
+# ROS 2 src build and install directories
+src/
+build/
+install/
+log/
+.colcon/
+
+# Pixi build artifacts
+pixi.lock
+.pixicache/
+
+# General IDE and editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# Python artifacts
+*.pyc
+*.pyo
+__pycache__/
+
+# CMake artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Other
+*.orig
+*.rej
+*.conda
