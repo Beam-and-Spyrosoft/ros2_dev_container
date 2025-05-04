@@ -24,16 +24,11 @@ WORKDIR /home/$USERNAME
 
 # Install oh-my-zsh and plugins for the user
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && \
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Copy zshrc configuration
 COPY --chown=$USERNAME:$USERNAME zshrc /home/$USERNAME/.zshrc
-
-# Create minimal p10k config if user doesn't have one
-RUN [ ! -f /home/$USERNAME/.p10k.zsh ] && \
-    echo "# Generated p10k config - run 'p10k configure' to customize\ntypeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet\n" > /home/$USERNAME/.p10k.zsh || true
 
 # Make zsh the default shell for user
 RUN sudo chsh -s /bin/zsh $USERNAME
