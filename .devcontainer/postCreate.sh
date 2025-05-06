@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # Import repositories
 vcs import --input src/ros2.repos --skip-existing src/
