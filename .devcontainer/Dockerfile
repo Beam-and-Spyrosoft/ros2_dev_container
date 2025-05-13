@@ -35,10 +35,6 @@ COPY --chown=$USERNAME:$USERNAME zshrc /home/$USERNAME/.zshrc
 # Make zsh the default shell for user
 RUN sudo chsh -s /bin/zsh $USERNAME
 
-# Source ROS environment automatically
-RUN echo "source /opt/ros/$ROS_DISTRO/setup.zsh" >> /home/$USERNAME/.zshrc
-RUN echo "source /home/ws/install/setup.zsh" >> /home/$USERNAME/.zshrc
-
 # Set the default user
 ENV SHELL /bin/zsh
 CMD ["/bin/zsh"]
