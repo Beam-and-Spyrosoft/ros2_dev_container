@@ -36,6 +36,14 @@ cross_reference
 docs_build
 docs_output
 
+# Coverage reports
+coverage_artifacts
+coverage_report_framework
+.coverage_values
+all_coverage.info
+framework_filtered.info
+framework_tmp.info
+
 # Other
 *.orig
 *.rej
