@@ -31,11 +31,6 @@ cmake_install.cmake
 Makefile
 compile_commands.json
 
-# Docs
-cross_reference
-docs_build
-docs_output
-
 # Coverage reports
 coverage_artifacts
 coverage_report_framework
