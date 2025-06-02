@@ -115,3 +115,6 @@ source /home/ws/install/setup.zsh
 
 alias srz="source /opt/ros/$ROS_DISTRO/setup.zsh"
 alias srx="source /home/ws/install/setup.zsh"
+
+alias cb='colcon build --event-handlers console_cohesion+'
+alias ct='colcon test --event-handlers console_cohesion+'
