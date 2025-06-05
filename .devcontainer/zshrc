@@ -118,3 +118,7 @@ alias srx="source /home/ws/install/setup.zsh"
 
 alias cb='colcon build --event-handlers console_cohesion+'
 alias ct='colcon test --event-handlers console_cohesion+'
+
+# If you use GPG, uncomment the following line to ensure that
+# the GPG_TTY environment variable is set correctly.
+export GPG_TTY=$(tty)
