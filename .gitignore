@@ -31,8 +31,17 @@ cmake_install.cmake
 Makefile
 compile_commands.json
 
+# Coverage reports
+coverage_artifacts
+coverage_report_framework
+.coverage_values
+all_coverage.info
+framework_filtered.info
+framework_tmp.info
+
 # Other
 *.orig
 *.rej
 *.conda
 .cache
+.zsh_history

@@ -110,5 +110,15 @@ export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 export CMAKE_COLOR_DIAGNOSTICS=ON
 export CMAKE_GENERATOR=Ninja
 
+source /opt/ros/$ROS_DISTRO/setup.zsh
+source /home/ws/install/setup.zsh
+
 alias srz="source /opt/ros/$ROS_DISTRO/setup.zsh"
 alias srx="source /home/ws/install/setup.zsh"
+
+alias cb='colcon build --event-handlers console_cohesion+'
+alias ct='colcon test --event-handlers console_cohesion+'
+
+# GPG configuration for signing commits
+export GPG_TTY=$(tty)
+export PINENTRY_USER_DATA="USE_CURSES=1"
