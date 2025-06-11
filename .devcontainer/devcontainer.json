@@ -9,6 +9,7 @@
         "args": {
             "USERNAME": "${localEnv:USER}",
             "DOCKER_REPO": "osrf/ros",
+            // supported: kilted, jazzy
             "ROS_DISTRO": "jazzy",
             "IMAGE_SUFFIX": "-desktop"
         }
