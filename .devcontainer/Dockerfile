@@ -13,11 +13,6 @@ RUN useradd -m $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# Temporary fix for broken Open Robotics apt key
-RUN rm -f /etc/apt/sources.list.d/ros2*.list /usr/share/keyrings/ros2-*.gpg && \
-    curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg && \
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu noble main" > /etc/apt/sources.list.d/ros2.list
-
 # Install additonal packages - add any that you need
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y sudo python3-pip python-is-python3 ssh neovim git libboost-all-dev libgmock-dev \
