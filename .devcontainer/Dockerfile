@@ -18,7 +18,7 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y sudo python3-pip python-is-python3 ssh neovim git libboost-all-dev libgmock-dev \
     zsh curl wget fonts-powerline locales less gdb ros-dev-tools ros-$ROS_DISTRO-ament-* cmake ninja-build \
     python3-bloom python3-vcstool fakeroot python3-sphinx sphinx-rtd-theme-common python3-sphinx-rtd-theme \
-    doxygen doxygen-gui graphviz python3-myst-parser python3-breathe python3-exhale python3-linkify-it lcov \
+    doxygen doxygen-gui graphviz python3-myst-parser python3-breathe python3-exhale lcov \
     libfoonathan-memory-dev
 
 USER $USERNAME
