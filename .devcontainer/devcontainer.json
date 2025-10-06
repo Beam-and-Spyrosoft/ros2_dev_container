@@ -14,8 +14,8 @@
             "IMAGE_SUFFIX": "-desktop"
         }
     },
-    "workspaceMount": "source=${localWorkspaceFolder},target=/home/ws,type=bind",
-    "workspaceFolder": "/home/ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+    "workspaceFolder": "${localWorkspaceFolder}",
     "customizations": {
         "vscode": {
             "extensions":[
@@ -43,7 +43,7 @@
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
         "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,readonly",
-        "source=${localEnv:HOME}/.gitconfig,target=/home/${localEnv:USER}/.gitconfig,type=bind",
+        "source=${localEnv:HOME}/.gitconfigs,target=/home/${localEnv:USER}/.gitconfigs,type=bind",
         "source=${localWorkspaceFolder}/.zsh_history,target=/home/${localEnv:USER}/.zsh_history,type=bind"
     ],
     "initializeCommand": "sh ./.devcontainer/initialize.sh",

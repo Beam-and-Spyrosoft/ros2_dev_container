@@ -1,5 +1,13 @@
 #!/usr/bin/env zsh
 
+# Create links for all .gitconfig files from .gitconfigs to home directory
+for config in ~/.gitconfigs/\.*; do
+    if [ -f "$config" ]; then
+        filename=$(basename "$config")
+        ln -s "$config" ~/"$filename"
+    fi
+done
+
 # Import repositories
 vcs import --input src/ros2.repos --skip-existing src/
 
