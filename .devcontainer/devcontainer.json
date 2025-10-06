@@ -24,9 +24,8 @@
                 "twxs.cmake",
                 "donjayamanne.python-extension-pack",
                 "eamodio.gitlens",
-                "ms-iot.vscode-ros",
-                "xaver.clang-format",
-                "llvm-vs-code-extensions.vscode-clangd"
+                "ranch-hand-robotics.rde-pack",
+                "xaver.clang-format"
             ]
         }
     },
